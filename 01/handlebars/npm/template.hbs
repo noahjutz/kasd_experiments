@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {{#with guy}}
+      <p>hello {{firstname}} {{lastname}}!</p>
+    {{/with}}
+
+    <ul>
+      {{#each items}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+
+    {{! comment}}
+
+    <p>{{guy.firstname}} {{loud guy.lastname}}</p>
+    <p>{{time}}</p>
+
+    noop
+    {{#noop}}
+      {{text}}
+    {{/noop}}
+
+    bold {{text}}
+    {{#bold}}{{text}}{{/bold}}
+
+    test
+    {{#test}}{{yo}}{{/test}}
+
+    list
+    {{#list items}}{{this}}{{/list}}
+  </body>
+</html>

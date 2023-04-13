@@ -1,0 +1,17 @@
+{
+  "name": "joi_hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.1",
+    "@hapi/vision": "^7.0.1",
+    "handlebars": "^4.7.7",
+    "joi": "^17.9.1"
+  }
+}
