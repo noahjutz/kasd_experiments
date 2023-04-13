@@ -37,8 +37,3 @@
 
 TODO
 
-## Links
-
-- [ELO](https://elearning.hs-regensburg.de/course/view.php?id=3955) (not used much)
-- [Slack](https://full-stack-oth-2023.slack.com)
-- [Course](https://reader.tutors.dev/course/adv-full-stack-oth-2023)
