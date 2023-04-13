@@ -1,5 +1,6 @@
 import { fileURLToPath } from "node:url";
-import path from "node:path";
+import { join, dirname } from "node:path";
 import { Low } from "lowdb";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const file = join(__dirname, "db.json");

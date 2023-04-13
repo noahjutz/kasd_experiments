@@ -24,8 +24,8 @@ import { Low } from "lowdb";
     ```
 
 3.  ```js
-    import { path } from "node:path";
-    const __dirname = path.dirname(__filename);
+    import { dirname } from "node:path";
+    const __dirname = dirname(__filename);
     // /home/noah/noah/oth/2023_sose/KASD/kasd_experiments/04/lowdb
     ```
 
