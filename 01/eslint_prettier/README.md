@@ -46,3 +46,7 @@ This is an unresolved [issue](https://github.com/prettier/prettier/issues/11223)
 ### VSCode tab width doesn't match prettier default
 
 Workaround: cmd+shift+p -> indent using tabs
+
+### import/no-unresolved
+
+[Documentation](https://github.com/import-js/eslint-plugin-import/blob/v2.27.5/docs/rules/no-unresolved.md)

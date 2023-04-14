@@ -3,11 +3,13 @@ import Vision from "@hapi/vision";
 import { fileURLToPath } from "node:url";
 import { join, dirname } from "node:path";
 import Handlebars from "handlebars";
+// eslint-disable-next-line import/no-unresolved
 import { Low } from "lowdb";
+// eslint-disable-next-line import/no-unresolved
 import { JSONFile } from "lowdb/node";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const db = new Low(new JSONFile(join(__dirname, "db.json")));
+const dir = dirname(fileURLToPath(import.meta.url));
+const db = new Low(new JSONFile(join(dir, "db.json")));
 
 const initDb = async () => {
   await db.read();
@@ -24,7 +26,7 @@ const initSrv = async () => {
     engines: {
       hbs: Handlebars,
     },
-    relativeTo: __dirname,
+    relativeTo: dir,
     path: "views",
     partialsPath: "views",
     layout: true,
