@@ -1,7 +1,7 @@
-<form class="field has-addons">
+<form class="field has-addons" method="post" action="">
   <p class="control">
     <span class="select">
-      <select>
+      <select name="pronouns">
         <option>He</option>
         <option>She</option>
         <option>They</option>
@@ -9,18 +9,18 @@
     </span>
   </p>
   <p class="control has-icons-left">
-    <input class="input" type="text" placeholder="Username" />
+    <input class="input" type="text" name="username" placeholder="Username" />
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
   </p>
   <p class="control has-icons-left">
-    <input class="input" type="text" placeholder="Email" />
+    <input class="input" type="text" name="email" placeholder="Email" />
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
   </p>
   <p class="control">
-    <a class="button is-primary">Add</a>
+    <button class="button is-primary" type="submit">Add</button>
   </p>
 </form>
