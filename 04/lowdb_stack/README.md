@@ -31,7 +31,7 @@ echo {} > .prettierrc
 
 ### Hapi
 
-See [01/hapi](../../01/hapi/README.md) (TODO make better)
+See [01/hapi](../../01/hapi/README.md)
 
 ```js
 const init = async () => {
