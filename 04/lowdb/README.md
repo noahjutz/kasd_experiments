@@ -65,6 +65,7 @@ db.data // db content
 
 ## Further reading
 
+- [lowdb - GitHub](https://github.com/typicode/lowdb)
 - [fileURLToPath - nodejs](https://nodejs.org/docs/latest-v18.x/api/url.html#urlfileurltopathurl)
 - [dirname - nodejs](https://nodejs.org/docs/latest-v18.x/api/path.html#pathdirnamepath)
 - [Top Level Await - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await)
