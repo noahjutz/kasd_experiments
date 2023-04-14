@@ -7,6 +7,7 @@
 - [x] Prettier, ESLint
 - [x] Hapi
 - [x] Bulma
+    - [ ] npm
 - [x] Handlebars
 
 ### 02
