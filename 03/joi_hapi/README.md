@@ -86,4 +86,3 @@ server.ext("onPreResponse", (request, h) => {
 - [hapi-joi-errors - Github](https://github.com/csakis/hapi-joi-errors)
 - [Validation - Hapi](https://hapi.dev/tutorials/validation/?lang=en_US)
 - [Boom - Hapi](https://hapi.dev/module/boom/)
-````
