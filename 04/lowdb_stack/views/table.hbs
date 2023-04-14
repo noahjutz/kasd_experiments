@@ -1,6 +1,18 @@
-{{#each users}}
-  {{#each this}}
-    {{@key}}:
-    {{this}},
-  {{/each}}
-{{/each}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Pronouns</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        {{#each this}}
+          <td>{{this}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
