@@ -2,13 +2,14 @@
 
 ## Stack
 
-|           |                         |
-| --------- | ----------------------- |
-| Framework | Hapi + Plugins          |
-| Frontend  | Handlebars + Bulma      |
-| Backend   | Lowdb                   |
-| Style     | ESLint + Prettier       |
-| Test      | Mocha TDD + Chai Assert |
+|                  |                             |
+| ---------------- | --------------------------- |
+| Framework        | Hapi                        |
+| Frontend         | Vision + Handlebars + Bulma |
+| Backend          | Lowdb                       |
+| Style            | ESLint + Prettier           |
+| Input Validation | Joi                         |
+| Test             | Mocha TDD + Chai Assert     |
 
 ## Installation
 
@@ -51,10 +52,6 @@ server.views({
 });
 ```
 
-### Mocha + Chai (todo)
-
-See [04/mocha_chai](../../04/mocha_chai/README.md)
-
 ### Lowdb
 
 See [04/lowdb#Setup](../../04/lowdb/README.md#setup)
@@ -64,3 +61,11 @@ import { Low } from "lowdb";
 import { JSONFile } from "lowdb/node";
 const db = new Low(new JSONFile("db.json"));
 ```
+
+### Joi (todo)
+
+See [03/joi_hapi](../../03/joi_hapi/README.md) (todo make better)
+
+### Mocha + Chai (todo)
+
+See [04/mocha_chai](../../04/mocha_chai/README.md)
