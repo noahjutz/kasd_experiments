@@ -27,6 +27,7 @@ const initSrv = async () => {
     relativeTo: __dirname,
     path: "views",
     partialsPath: "views",
+    layout: true,
   });
 
   server.route({
