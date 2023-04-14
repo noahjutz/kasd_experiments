@@ -32,14 +32,27 @@ const initSrv = async () => {
     layout: true,
   });
 
-  server.route({
-    method: "GET",
-    path: "/",
-    handler: (request, h) => {
-      db.read();
-      return h.view("index", { users: db.data.users });
+  server.route([
+    {
+      method: "GET",
+      path: "/",
+      handler: (request, h) => {
+        db.read();
+        return h.view("index", { users: db.data.users });
+      },
     },
-  });
+    {
+      method: "POST",
+      path: "/",
+      handler: async (request, h) => {
+        await db.read();
+        const { pronouns, username, email } = request.payload;
+        db.data.users.push({ pronouns, username, email });
+        await db.write();
+        return h.redirect("/");
+      },
+    },
+  ]);
 
   await server.start();
 };

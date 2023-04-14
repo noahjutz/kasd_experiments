@@ -1,3 +1,6 @@
 {{#each users}}
-  {{this}}
+  {{#each this}}
+    {{@key}}:
+    {{this}},
+  {{/each}}
 {{/each}}
