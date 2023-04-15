@@ -18,7 +18,7 @@ const init = async () => {
     },
     relativeTo: __dirname,
     path: "views",
-    partialsPath: "views/partials",
+    partialsPath: "views",
     layout: true,
   });
 
@@ -31,7 +31,7 @@ const init = async () => {
     {
       method: "GET",
       path: "/login",
-      handler: (_, h) => h.view("login"),
+      handler: (_, h) => h.view("login/index.hbs"),
     },
     {
       method: "POST",
@@ -51,7 +51,7 @@ const init = async () => {
     {
       method: "GET",
       path: "/dashboard",
-      handler: (request, h) => h.view("dashboard", { ...request.query }),
+      handler: (request, h) => h.view("dashboard/index", { ...request.query }),
     },
   ]);
 
