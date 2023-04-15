@@ -2,62 +2,69 @@
 
 ## Setup
 
-1. Install
+1.  Install
 
-   ```
-   npm i joi
-   ```
+    ```
+    npm i joi
+    ```
 
-2. Import
+2.  Import
 
-   ```js
-   import Joi from "joi";
-   ```
+    ```js
+    import Joi from "joi";
+    ```
 
-3. Initialize
+3.  Initialize
 
-   ```js
-   await server.validator(Joi);
-   ```
+    ```js
+    await server.validator(Joi);
+    ```
 
 ## Usage
 
 Add the `validate` property to the route options.
 
 ```js
+const route = {
+  options: {
+    validate: {...},
+  }
+}
+```
+
+### Define Schemas
+
+```js
 validate: {
-  options: { abortEarly: false },
-  failAction: (request, h, err) => {},
-  query: Joi.object({...}), // Query params
-  params: Joi.object({...}), // Path params
-  payload: Joi.object({...}), // Post request payload
+  query: {...}, // Query params
+  params: {...}, // Path params
+  payload: {...}, // Post request payload params
 },
 ```
 
-### failAction
+### Handle input errors
 
-```js
-const failAction = (request, h, err) => {
-  // todo
-};
-```
+1.  Send the error:
 
-## Error handling (todo)
+    ```js
+    validate: {
+      options: { abortEarly: false },
+      failAction: (request, h, err) => err,
+    }
+    ```
 
-In init:
+2.  Handle the error:
 
-```js
-server.ext("onPreResponse", (request, h) => {
-  const response = request.response;
-  if (!response.isBoom) return h.continue;
+    ```js
+    server.ext("onPreResponse", (request, h) => {
+      const response = request.response;
+      if (!response.isBoom) return h.continue;
 
-  if (request.route.path === "/submit") {
-    // TODO group details by path
-    // const errors = response.details.group(({ path }) => path);
-    return h.view("form", { errors: response.details });
-  }
-});
-```
+      const error = ...
+
+      return h.view("error", { error });
+    });
+    ```
 
 ## Troubleshooting
 
