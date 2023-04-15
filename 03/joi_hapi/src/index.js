@@ -52,7 +52,7 @@ const init = async () => {
         validate: {
           payload: schemas.login,
           options: { abortEarly: false },
-          failAction: async (request, h, err) => err,
+          failAction: (request, h, err) => err,
         },
       },
     },
