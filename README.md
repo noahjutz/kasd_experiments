@@ -16,6 +16,8 @@
 - [x] @hapi/vision
 - [x] @hapi/cookie
   - [ ] [auth](https://hapi.dev/tutorials/auth)
+- [ ] @hapi/boom
+- [ ] [request lifecycle](https://hapi.dev/api/?v=21.3.1#request-lifecycle)
 - [x] node event loop
 
 ### 03
