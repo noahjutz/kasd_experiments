@@ -26,7 +26,7 @@ See [01/eslint_prettier](../../01/eslint_prettier/README.md)
 
 ```sh
 npm init @eslint/config
-npm i -D prettier esling-config-prettier
+npm i -D prettier eslint-config-prettier
 echo {} > .prettierrc
 ```
 
