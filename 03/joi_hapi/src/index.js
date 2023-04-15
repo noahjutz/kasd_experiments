@@ -35,7 +35,7 @@ const init = async () => {
         .filter((e) => e.path.includes("password"))
         .map((e) => e.message),
     };
-    return h.view("login/index", { error: JSON.stringify(error) });
+    return h.view("login/index", { error: error });
   });
 
   server.route([
