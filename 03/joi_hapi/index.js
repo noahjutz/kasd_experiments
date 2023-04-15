@@ -31,7 +31,7 @@ const init = async () => {
     {
       method: "GET",
       path: "/login",
-      handler: (_, h) => h.view("login/index.hbs"),
+      handler: (_, h) => h.view("login/index"),
     },
     {
       method: "POST",
@@ -51,7 +51,7 @@ const init = async () => {
     {
       method: "GET",
       path: "/dashboard",
-      handler: (request, h) => h.view("dashboard/index", { ...request.query }),
+      handler: (_, h) => h.view("dashboard/index"),
     },
   ]);
 
