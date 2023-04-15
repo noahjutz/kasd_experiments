@@ -1,14 +1,24 @@
 # Joi with hapi
 
-## Install
+## Setup
 
-```
-npm i joi
-```
+1. Install
 
-```js
-import Joi from "joi";
-```
+   ```
+   npm i joi
+   ```
+
+2. Import
+
+   ```js
+   import Joi from "joi";
+   ```
+
+3. Initialize
+
+   ```js
+   await server.validator(Joi);
+   ```
 
 ## Usage
 

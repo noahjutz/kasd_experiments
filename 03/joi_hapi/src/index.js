@@ -4,6 +4,7 @@ import Handlebars from "handlebars";
 import Joi from "joi";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import * as schemas from "./joi_schemas.js";
 
 const __dirname = dirname(join(fileURLToPath(import.meta.url)));
 
@@ -11,6 +12,8 @@ const init = async () => {
   const server = Hapi.server({ port: 3000, host: "localhost" });
 
   await server.register(Vision);
+
+  server.validator(Joi);
 
   server.views({
     engines: {
@@ -34,10 +37,7 @@ const init = async () => {
       handler: (_, h) => h.redirect("/dashboard"),
       options: {
         validate: {
-          payload: Joi.object({
-            password: Joi.string().alphanum().min(3).max(10).required(),
-            email: Joi.string().email().required(),
-          }),
+          payload: schemas.login,
           options: { abortEarly: false },
           failAction: "error",
         },
