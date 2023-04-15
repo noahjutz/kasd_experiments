@@ -25,6 +25,19 @@ const init = async () => {
     layout: true,
   });
 
+  server.ext("onPreResponse", (request, h) => {
+    if (!request.response.isBoom) return h.continue;
+
+    const e = request.response.details;
+    const error = {
+      email: e.filter((e) => e.path.includes("email")).map((e) => e.message),
+      password: e
+        .filter((e) => e.path.includes("password"))
+        .map((e) => e.message),
+    };
+    return h.view("login/index", { error: JSON.stringify(error) });
+  });
+
   server.route([
     {
       method: "GET",
@@ -39,7 +52,7 @@ const init = async () => {
         validate: {
           payload: schemas.login,
           options: { abortEarly: false },
-          failAction: "error",
+          failAction: async (request, h, err) => err,
         },
       },
     },
