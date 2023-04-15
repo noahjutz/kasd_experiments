@@ -20,19 +20,22 @@
 ### 03
 
 - [x] async await
-- [x] .env
+- [x] dotenv
 - [x] Joi
 - [x] Joi with Hapi
 
 ### 04
 
-- [ ] [lowdb](https://github.com/typicode/lowdb)
+- [x] lowdb
+- [ ] lowdb_stack
 - [x] Mocha
 - [x] Chai Assert
 
 ### 05
 
+- [ ] NoSQL Overview
 - [ ] MongoDB
+- [ ] mongoose
 
 ### 06
 
