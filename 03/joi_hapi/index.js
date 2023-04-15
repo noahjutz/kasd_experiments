@@ -26,16 +26,11 @@ const init = async () => {
     {
       method: "GET",
       path: "/",
-      handler: (_, h) => h.redirect("/login"),
-    },
-    {
-      method: "GET",
-      path: "/login",
       handler: (_, h) => h.view("login/index"),
     },
     {
       method: "POST",
-      path: "/login",
+      path: "/",
       handler: (_, h) => h.redirect("/dashboard"),
       options: {
         validate: {
