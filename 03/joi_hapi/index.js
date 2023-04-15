@@ -22,43 +22,37 @@ const init = async () => {
     layout: true,
   });
 
-  server.ext("onPreResponse", (request, h) => {
-    const response = request.response;
-    if (!response.isBoom) return h.continue;
-
-    if (request.route.path === "/submit") {
-      // TODO group details by path
-      // const errors = response.details.group(({ path }) => path);
-      return h.view("form", { errors: response.details });
-    }
-  });
-
   server.route([
     {
       method: "GET",
       path: "/",
-      handler: (request, h) => h.view("form"),
+      handler: (_, h) => h.redirect("/login"),
     },
     {
       method: "GET",
-      path: "/submit",
-      handler: (request, h) => {
-        const { name, username, email } = request.query;
-        return h.view("results", { ...request.query });
-      },
+      path: "/login",
+      handler: (_, h) => h.view("login"),
+    },
+    {
+      method: "POST",
+      path: "/login",
+      handler: (_, h) => h.redirect("/dashboard"),
       options: {
         validate: {
-          options: { abortEarly: false },
-          query: Joi.object({
+          payload: Joi.object({
             name: Joi.string().alphanum().min(3).max(10),
             username: Joi.string().alphanum().min(3).max(10).required(),
             email: Joi.string().email(),
           }),
-          failAction: (request, h, err) => {
-            throw err;
-          },
+          options: { abortEarly: false },
+          failAction: "error",
         },
       },
+    },
+    {
+      method: "GET",
+      path: "/dashboard",
+      handler: (request, h) => h.view("dashboard", { ...request.query }),
     },
   ]);
 

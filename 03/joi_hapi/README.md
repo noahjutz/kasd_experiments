@@ -32,7 +32,7 @@ const failAction = (request, h, err) => {
 };
 ```
 
-## Error handling
+## Error handling (todo)
 
 In init:
 
@@ -48,6 +48,12 @@ server.ext("onPreResponse", (request, h) => {
   }
 });
 ```
+
+## Troubleshooting
+
+### SyntaxError: Handlebars partials are not supported
+
+This is an open prettier [issue](https://github.com/prettier/prettier/issues/11834). The glimmer parser [does not generally support handlebars](https://github.com/glimmerjs/glimmer-vm/issues/1367).
 
 ## Further Reading
 
