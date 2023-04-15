@@ -12,55 +12,24 @@ import Joi from "joi";
 
 ## Usage
 
+Add the `validate` property to the route options.
+
 ```js
-const route = {
-  // method, path, handler, ...
-  options: {
-    validate: {
-      options: {
-        abortEarly: false, // catch all errors
-      },
-      query: Joi.object({
-        name: Joi.string().alphanum().min(3).max(10),
-        // ... rules ...
-      }),
-      failAction: (request, h, err) => {
-        // ... callback ...
-        throw err;
-      },
-    },
-  },
+validate: {
+  options: { abortEarly: false },
+  failAction: (request, h, err) => {},
+  query: Joi.object({...}), // Query params
+  params: Joi.object({...}), // Path params
+  payload: Joi.object({...}), // Post request payload
+},
+```
+
+### failAction
+
+```js
+const failAction = (request, h, err) => {
+  // todo
 };
-```
-
-### Query params
-
-Example: `localhost:3000?name=ferris&location=chicago`
-
-```js
-query: Joi.object({
-  // ...
-}),
-```
-
-### Path params
-
-Example: `localhost:3000/{user}`
-
-```js
-params: Joi.object({
-  // ...
-}),
-```
-
-### Request payload
-
-Example: `localhost:3000/post` (post request)
-
-```js
-payload: Joi.object({
-  // ...
-}),
 ```
 
 ## Error handling
