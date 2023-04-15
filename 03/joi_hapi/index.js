@@ -1,7 +1,11 @@
-const Hapi = require("@hapi/hapi");
-const Vision = require("@hapi/vision");
-const Handlebars = require("handlebars");
-const Joi = require("joi");
+import Hapi from "@hapi/hapi";
+import Vision from "@hapi/vision";
+import Handlebars from "handlebars";
+import Joi from "joi";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = dirname(join(fileURLToPath(import.meta.url)));
 
 const init = async () => {
   const server = Hapi.server({ port: 3000, host: "localhost" });
@@ -44,9 +48,7 @@ const init = async () => {
       },
       options: {
         validate: {
-          options: {
-            abortEarly: false,
-          },
+          options: { abortEarly: false },
           query: Joi.object({
             name: Joi.string().alphanum().min(3).max(10),
             username: Joi.string().alphanum().min(3).max(10).required(),
