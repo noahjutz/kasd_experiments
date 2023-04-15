@@ -72,6 +72,10 @@ validate: {
 
 This is an open prettier [issue](https://github.com/prettier/prettier/issues/11834). The glimmer parser [does not generally support handlebars](https://github.com/glimmerjs/glimmer-vm/issues/1367).
 
+### Handlebars helpers in Hapi
+
+I have not figured this out yet.
+
 ## Further Reading
 
 - [hapi-joi-errors - Medium](https://medium.com/@csakis/hapi-joi-error-handling-with-custom-messages-1f544e2b1489)
