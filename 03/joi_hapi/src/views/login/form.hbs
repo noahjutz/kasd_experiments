@@ -3,20 +3,27 @@
     <div class="control">
       <input class="input {{#if error.email}}is-danger{{/if}}" name="email" type="text" placeholder="Email" />
       {{#if error.email}}
-      <p class="help is-danger">
         {{#each error.email}}
-          {{this}}
+          <p class="help is-danger">
+            {{this}}
+          </p>
         {{/each}}
-      </p>
       {{/if}}
     </div>
     <div class="control">
       <input
-        class="input"
+        class="input {{#if error.password}}is-danger{{/if}}"
         name="password"
         type="password"
         placeholder="Password"
       />
+      {{#if error.password}}
+        {{#each error.password}}
+          <p class="help is-danger">
+            {{this}}
+          </p>
+        {{/each}}
+      {{/if}}
     </div>
     <div class="control">
       <button class="button is-primary" type="submit">Login</button>
