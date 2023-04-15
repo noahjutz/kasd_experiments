@@ -40,9 +40,8 @@ const init = async () => {
       options: {
         validate: {
           payload: Joi.object({
-            name: Joi.string().alphanum().min(3).max(10),
-            username: Joi.string().alphanum().min(3).max(10).required(),
-            email: Joi.string().email(),
+            password: Joi.string().alphanum().min(3).max(10).required(),
+            email: Joi.string().email().required(),
           }),
           options: { abortEarly: false },
           failAction: "error",
