@@ -2,13 +2,11 @@
   <div class="field is-grouped">
     <div class="control">
       <input class="input {{#if error.email}}is-danger{{/if}}" name="email" type="text" placeholder="Email" />
-      {{#if error.email}}
-        {{#each error.email}}
-          <p class="help is-danger">
-            {{this}}
-          </p>
-        {{/each}}
-      {{/if}}
+      {{#each error.email}}
+        <p class="help is-danger">
+          {{this}}
+        </p>
+      {{/each}}
     </div>
     <div class="control">
       <input
@@ -17,13 +15,11 @@
         type="password"
         placeholder="Password"
       />
-      {{#if error.password}}
-        {{#each error.password}}
-          <p class="help is-danger">
-            {{this}}
-          </p>
-        {{/each}}
-      {{/if}}
+      {{#each error.password}}
+        <p class="help is-danger">
+          {{this}}
+        </p>
+      {{/each}}
     </div>
     <div class="control">
       <button class="button is-primary" type="submit">Login</button>

@@ -68,9 +68,12 @@ validate: {
 
 ## Troubleshooting
 
-### SyntaxError: Handlebars partials are not supported
+### Prettier Handlebars SyntaxErrors
 
-This is an open prettier [issue](https://github.com/prettier/prettier/issues/11834). The glimmer parser [does not generally support handlebars](https://github.com/glimmerjs/glimmer-vm/issues/1367).
+Because prettier uses [glimmer](https://github.com/glimmerjs/glimmer-vm), which is made for ember and not pure handlebars, this error is falsely thrown. 
+
+* SyntaxError: A block may only be used inside an HTML element or another block ([issue](https://github.com/glimmerjs/glimmer-vm/issues/1233))
+* SyntaxError: Handlebars partials are not supported ([issue](https://github.com/glimmerjs/glimmer-vm/issues/1367)) ([issue](https://github.com/prettier/prettier/issues/11834))
 
 ### Handlebars helpers in Hapi
 
