@@ -7,7 +7,7 @@
 - [x] Prettier, ESLint
 - [x] Hapi
 - [x] Bulma
-    - [ ] npm
+  - [ ] npm
 - [x] Handlebars
 
 ### 02
@@ -15,6 +15,7 @@
 - [x] @hapi/inert
 - [x] @hapi/vision
 - [x] @hapi/cookie
+  - [ ] [auth](https://hapi.dev/tutorials/auth)
 - [x] node event loop
 
 ### 03
@@ -36,8 +37,8 @@
 - [ ] NoSQL Overview
 - [ ] MongoDB
 - [ ] mongoose
+- [ ] [Studio 3T](https://studio3t.com/)
 
 ### 06
 
 TODO
-
