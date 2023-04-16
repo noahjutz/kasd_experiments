@@ -64,8 +64,12 @@ const db = new Low(new JSONFile("db.json"));
 
 ### Joi (todo)
 
-See [03/joi_hapi](../../03/joi_hapi/README.md) (todo make better)
+See [03/joi_hapi](../../03/joi_hapi/README.md)
+
+(Not yet implemented)
 
 ### Mocha + Chai (todo)
 
 See [04/mocha_chai](../../04/mocha_chai/README.md)
+
+(Not yet implemented)
