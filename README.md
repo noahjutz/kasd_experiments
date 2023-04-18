@@ -17,7 +17,6 @@
 - [x] @hapi/cookie
   - [ ] [auth](https://hapi.dev/tutorials/auth)
 - [ ] @hapi/boom
-- [ ] [request lifecycle](https://hapi.dev/api/?v=21.3.1#request-lifecycle)
 - [x] node event loop
 
 ### 03
@@ -30,16 +29,16 @@
 ### 04
 
 - [x] lowdb
-- [ ] lowdb_stack
+- [x] lowdb_stack
 - [x] Mocha
 - [x] Chai Assert
 
 ### 05
 
-- [ ] NoSQL Overview
-- [ ] MongoDB
+- [x] mongosh
 - [ ] mongoose
 - [ ] [Studio 3T](https://studio3t.com/)
+- [ ] mongoDB Node Driver
 
 ### 06
 
