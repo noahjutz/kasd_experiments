@@ -10,11 +10,15 @@ yay -S mongodb-bin
 
 ```sh
 systemctl start mongodb
-mongosh
 ```
 
-## Mongosh
+## Use Mongosh
 
+### Run
+
+```sh
+mongosh
+```
 ### [Help](https://www.mongodb.com/docs/mongodb-shell/run-commands)
 
 ```js
