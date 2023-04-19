@@ -36,10 +36,17 @@
 ### 05
 
 - [x] mongosh
-- [ ] mongoose
-- [ ] [Studio 3T](https://studio3t.com/)
+- [x] mongoose
 - [ ] mongoDB Node Driver
 
 ### 06
+
+- [ ] mongoDB Relationships
+- [ ] RESTful APIs
+- [ ] API with hapi
+- [ ] [Postman](https://www.postman.com/)
+- [ ] Test APIs with [axios](https://axios-http.com/docs/)
+
+### 07
 
 TODO
