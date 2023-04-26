@@ -8,7 +8,7 @@ An API is restful when it complies with the REST architectural style, which is c
 
 ### Resource identification
 
-- API endpoints are URLs.
+API endpoints are URLs.
 
 ### Intuitive Update & Delete
 
