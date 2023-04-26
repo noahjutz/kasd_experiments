@@ -41,7 +41,7 @@
 
 ### 06
 
-- [ ] mongoDB Relationships
+- [x] mongoDB Relationships
 - [ ] RESTful APIs
 - [ ] API with hapi
 - [ ] [Postman](https://www.postman.com/)
