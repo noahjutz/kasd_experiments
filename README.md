@@ -43,7 +43,7 @@
 
 - [x] mongoDB Relationships
 - [x] RESTful APIs
-- [ ] API with hapi
+- [ ] API with hapi & mongodb
 - [ ] [Postman](https://www.postman.com/)
 - [ ] Test APIs with [axios](https://axios-http.com/docs/)
 
