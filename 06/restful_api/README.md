@@ -12,7 +12,7 @@ An API is restful when it complies with the REST architectural style.
 
    1. Intuitive Update & Delete
 
-      In accordance with [HATEOAS](#hateoas), endpoints pertaining to update & delete operations can be discovered in a previously received object's metadata.
+      In accordance with HATEOAS, endpoints pertaining to update & delete operations can be discovered in a previously received object.
 
    1. Self-descriptive messages
 
