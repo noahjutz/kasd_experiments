@@ -1,46 +1,46 @@
 # RESTful APIs
 
-An API is restful when it complies with the REST architectural style, which is characterized by the following 6 constraints (particularized for modern RESTful web APIs):
+An API is restful when it complies with the REST architectural style.
 
-## Uniform interface
+## REST Constraints
 
-4 Constraints pertaining to the request and response format:
+1. Uniform interface
 
-### Resource identification
+   1. Resource identification
 
-API endpoints are URLs.
+      API endpoints are URLs.
 
-### Intuitive Update & Delete
+   1. Intuitive Update & Delete
 
-In accordance with [HATEOAS](#hateoas), endpoints pertaining to update & delete operations can be discovered in a previously received object's metadata.
+      In accordance with [HATEOAS](#hateoas), endpoints pertaining to update & delete operations can be discovered in a previously received object's metadata.
 
-### Self-descriptive messages
+   1. Self-descriptive messages
 
-Requests and responses should be formatted in a self-explanatory way.
+      Requests and responses should be formatted in a self-explanatory way.
 
-### HATEOAS
+   1. HATEOAS
 
-Responses contain related API endpoints, such that every possible endpoint can be discovered from the entry point URL.
+      Responses contain related API endpoints, such that every possible endpoint can be discovered from the entry point URL.
 
-## Client-Server decoupling
+1. Client-Server decoupling
 
-The server is decoupled from the client. API responses are formatted in JSON, abstracting the internal data representation.
+   The server is decoupled from the client. API responses are formatted in JSON, abstracting the internal data representation.
 
-## Stateless
+1. Stateless
 
-The API Server doesn't retain information.
+   The API Server doesn't retain information.
 
-## Cacheable
+1. Cacheable
 
-Responses define themselves as either cacheable or non-cacheable.
+   Responses define themselves as either cacheable or non-cacheable.
 
-## Layered system
+1. Layered system
 
-Neither the client nor the server can tell if there are layers between them.
+   Neither the client nor the server can tell if there are layers between them.
 
-## Code on demand (optional)
+1. Code on demand (optional)
 
-The ability to send executable code from the server to the client when requested, extending client functionality. 
+   The ability to send executable code from the server to the client when requested, extending client functionality.
 
 ## Further reading
 
