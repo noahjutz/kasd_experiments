@@ -32,11 +32,11 @@ The API Server doesn't retain information.
 
 ## Cacheable
 
-- Responses define themselves as either cacheable or non-cacheable.
+Responses define themselves as either cacheable or non-cacheable.
 
 ## Layered system
 
-The client can't tell if there are layers between it and the server.
+Neither the client nor the server can tell if there are layers between them.
 
 ## Code on demand (optional)
 
