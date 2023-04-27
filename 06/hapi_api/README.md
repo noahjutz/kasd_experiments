@@ -17,6 +17,24 @@ This example API server allows clients to interact with public posts on a mock s
 
 See [04/mocha_chai](../../04/mocha_chai).
 
+Install:
+
+```sh
+npm i -D mocha chai @types/chai
+```
+
+import Chai:
+
+```js
+import { assert } from "chai";
+```
+
+Run tests:
+
+```sh
+mocha --ui tdd src/test
+```
+
 ### Mongoose
 
 See [05/mongoose](../../05/mongoose).
