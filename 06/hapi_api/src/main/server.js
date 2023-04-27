@@ -1,5 +1,6 @@
 import Hapi from "@hapi/hapi";
 import mongoose from "mongoose";
+import Boom from "@hapi/boom";
 
 const server = Hapi.server({
   port: 3000,
@@ -15,6 +16,11 @@ server.route([
     method: "GET",
     path: "/posts",
     handler: () => [],
+  },
+  {
+    method: "POST",
+    path: "/post",
+    handler: () => null,
   },
 ]);
 
