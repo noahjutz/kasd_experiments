@@ -8,7 +8,7 @@ export const start = async () => {
   server.route({
     method: "GET",
     path: "/",
-    handler: () => "Hello!",
+    handler: () => "Hello, World!",
   });
 
   await server.start();

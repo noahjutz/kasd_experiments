@@ -17,6 +17,6 @@ suite("API", () => {
 
   test("Entry point returns Hello World", async () => {
     const response = await client.get("/");
-    console.log(response.data);
+    assert.equal(response.data, "Hello, World!");
   });
 });
