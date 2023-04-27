@@ -8,15 +8,20 @@ const client = axios.create({
 
 suite("API", () => {
   setup(async () => {
-    await server.start();
+    // ...
   });
 
   teardown(async () => {
-    await server.stop();
+    // ...
   });
 
   test("Entry point returns Hello World", async () => {
-    const response = await client.get("/");
-    assert.equal(response.data, "Hello, World!");
+    const res = await client.get("/");
+    assert.equal(res.data, "Hello, World!");
+  });
+
+  test("/posts returns empty list", async () => {
+    const res = await client.get("/posts");
+    assert.isEmpty(res);
   });
 });

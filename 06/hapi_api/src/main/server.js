@@ -5,13 +5,13 @@ const server = Hapi.server({
   port: 3000,
 });
 
-export const start = async () => {
-  server.route({
-    method: "GET",
-    path: "/",
-    handler: () => "Hello, World!",
-  });
+server.route({
+  method: "GET",
+  path: "/",
+  handler: () => "Hello, World!",
+});
 
+export const start = async () => {
   await mongoose.connect("mongodb://127.0.0.1:27017/posts");
   await server.start();
   console.log("Server running on %s", server.info.uri);
