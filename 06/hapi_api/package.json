@@ -23,5 +23,8 @@
     "mocha": "^10.2.0",
     "prettier": "^2.8.8"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2"
+  }
 }
