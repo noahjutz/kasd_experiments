@@ -1,4 +1,6 @@
-# API Server with Hapi
+# API Server with Hapi and MongoDB
+
+This example API server allows clients to interact with public posts on a mock social media platform.
 
 ## Tech stack
 

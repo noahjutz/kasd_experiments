@@ -9,5 +9,8 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "no-undef": "off"
+  }
 }
