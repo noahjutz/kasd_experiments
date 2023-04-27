@@ -22,6 +22,6 @@ suite("API", () => {
 
   test("/posts returns empty list", async () => {
     const res = await client.get("/posts");
-    assert.isEmpty(res);
+    assert.isEmpty(res.data);
   });
 });
