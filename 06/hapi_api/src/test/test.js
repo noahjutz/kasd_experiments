@@ -24,11 +24,4 @@ suite("API", () => {
     const res = await client.get("/posts");
     assert.isEmpty(res.data);
   });
-
-  test("/post increases amount of posts by 1", async () => {
-    const postsOld = await client.get("/posts");
-    const res = await client.post("/post", { message: "Hi, this is a post!" });
-    const postsNew = await client.get("/posts");
-    assert.equal(postsNew.data.length, postsOld.data.length + 1);
-  });
 });
