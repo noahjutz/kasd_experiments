@@ -2,13 +2,13 @@ import { getPosts } from "./controller.js";
 
 export default [
   {
-    method: "GET",
     path: "/",
+    method: "GET",
     handler: () => "Hello, World!",
   },
   {
-    method: "GET",
     path: "/posts",
+    method: "GET",
     handler: getPosts,
   },
 ];
