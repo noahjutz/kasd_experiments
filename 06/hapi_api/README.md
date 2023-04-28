@@ -13,28 +13,53 @@ This example API server allows clients to interact with public posts on a mock s
 
 ## Implementation
 
-### Mocha + Chai
+### Mocha + Chai + Axios
 
 See [04/mocha_chai](../../04/mocha_chai).
 
-Install:
+1. Install:
 
-```sh
-npm i -D mocha chai @types/chai
-```
+   ```sh
+   npm i -D mocha chai axios @types/chai
+   ```
 
-import Chai:
+1. Import Chai and Axios:
 
-```js
-import { assert } from "chai";
-```
+   ```js
+   import { assert } from "chai";
+   import axios from "axios";
+   ```
 
-Run tests:
+1. Set up axios:
 
-```sh
-mocha --ui tdd src/test
-```
+   ```js
+   const client = axios.create({
+     baseURL: "http://localhost:3000",
+   });
+   ```
+
+1. Run tests:
+   ```sh
+   mocha --ui tdd src/test
+   ```
 
 ### Mongoose
 
 See [05/mongoose](../../05/mongoose).
+
+1. Install:
+
+   ```sh
+   npm i mongoose
+   ```
+
+2. Import
+
+   ```js
+   import { mongoose } from "mongoose";
+   ```
+
+3. Connect
+   ```js
+   mongoose.connect("mongodb://localhost:27017/posts");
+   ```
