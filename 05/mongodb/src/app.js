@@ -6,10 +6,15 @@ const client = new MongoClient(url);
 await client.connect();
 console.log("Connected successfully to server");
 
-const db = client.db("mydb");
-const coll = db.collection("mycoll");
-const doc = await coll.findOne();
-console.log(doc); // todo
-await db.dropDatabase();
+const tDropDatabase = async () => {
+  const db = client.db("mydb");
+  await db.collection("mycoll").insertOne({ name: "Joe" });
+
+  console.log(await db.stats());
+  await db.dropDatabase();
+  console.log(await db.stats());
+};
+
+await tDropDatabase();
 
 await client.close();
