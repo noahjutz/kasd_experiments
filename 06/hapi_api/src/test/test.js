@@ -8,11 +8,17 @@ const client = axios.create({
 
 suite("API", () => {
   setup(async () => {
-    // ...
+    server.resetDb();
   });
 
   teardown(async () => {
     // ...
+  });
+
+  suite("Meta", () => {
+    test("resetDb resets db", async () => {
+      // ...
+    });
   });
 
   test("Entry point returns Hello World", async () => {
