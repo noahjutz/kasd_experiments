@@ -1,33 +1,27 @@
 import { assert } from "chai";
-import axios from "axios";
+import { mongo, axios } from "./fixtures.js";
 import * as server from "../main/server.js";
-
-const client = axios.create({
-  baseURL: "http://localhost:3000",
-});
 
 suite("API", () => {
   setup(async () => {
-    server.resetDb();
+    await mongo.connect();
   });
 
   teardown(async () => {
-    // ...
+    await mongo.close();
   });
 
   suite("Meta", () => {
-    test("resetDb resets db", async () => {
-      // ...
-    });
+    test("resetDb resets db", async () => {});
   });
 
   test("Entry point returns Hello World", async () => {
-    const res = await client.get("/");
+    const res = await axios.get("/");
     assert.equal(res.data, "Hello, World!");
   });
 
   test("/posts returns empty list", async () => {
-    const res = await client.get("/posts");
+    const res = await axios.get("/posts");
     assert.isEmpty(res.data);
   });
 });

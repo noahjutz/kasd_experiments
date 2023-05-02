@@ -19,7 +19,3 @@ export const stop = async () => {
   await mongoose.disconnect();
   console.log("Server stopped");
 };
-
-export const resetDb = () => {
-  // mongoose.connection.dropDatabase();
-};
