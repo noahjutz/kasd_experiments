@@ -63,3 +63,13 @@ See [05/mongoose](../../05/mongoose).
    ```js
    mongoose.connect("mongodb://localhost:27017/posts");
    ```
+
+## TDD approach
+
+You want to implement a feature.
+
+1. What are the requirements?
+1. for each requirement:
+   1. which tests are required to prove that this requirement is fulfilled?
+   1. for each test:
+      1. Red, green, refactor.
