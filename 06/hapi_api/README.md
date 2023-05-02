@@ -13,41 +13,48 @@ This example API server allows clients to interact with public posts on a mock s
 
 ## Implementation
 
-### Mocha + Chai + Axios
+### Mocha + Chai
 
 See [04/mocha_chai](../../04/mocha_chai).
 
-1. Install:
+1. Install
 
    ```sh
-   npm i -D mocha chai axios @types/chai
+   npm i -D mocha chai @types/chai
    ```
 
-1. Import Chai and Axios:
+1. Import Chai and Axios
 
    ```js
    import { assert } from "chai";
-   import axios from "axios";
    ```
 
-1. Set up axios:
+1. Run tests
 
-   ```js
-   const client = axios.create({
-     baseURL: "http://localhost:3000",
-   });
-   ```
-
-1. Run tests:
    ```sh
    mocha --ui tdd src/test
+   ```
+
+### Axios
+
+1. Install
+
+   ```sh
+   npm i -D axios
+   ```
+
+1. Setup
+
+   ```js
+   import axios from "axios";
+   const client = axios.create({ baseURL: "http://localhost:3000" });
    ```
 
 ### Mongoose
 
 See [05/mongoose](../../05/mongoose).
 
-1. Install:
+1. Install
 
    ```sh
    npm i mongoose
@@ -60,8 +67,34 @@ See [05/mongoose](../../05/mongoose).
    ```
 
 3. Connect
+
    ```js
    mongoose.connect("mongodb://localhost:27017/posts");
+   ```
+
+### MongoDB Nodejs Driver
+
+See [05/mongodb](../../05/mongodb/).
+
+To cross-check results in tests, I use the MongoDB Nodejs Driver directly.
+
+1. Install
+
+   ```sh
+   npm i -D mongodb
+   ```
+
+2. Setup
+
+   ```js
+   import { MongoClient } from "mongodb";
+   const client = new MongoClient("mongodb://127.0.0.1:27017");
+   ```
+
+3. Connect and disconnect
+   ```js
+   await client.connect();
+   await client.close();
    ```
 
 ## TDD approach
