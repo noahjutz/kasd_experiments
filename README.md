@@ -37,7 +37,7 @@
 
 - [x] mongosh
 - [x] mongoose
-- [ ] mongoDB Node Driver
+- [x] mongoDB Node Driver
 
 ### 06
 
@@ -49,4 +49,6 @@
 
 ### 07
 
-TODO
+### 08
+
+### 09
