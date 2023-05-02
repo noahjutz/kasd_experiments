@@ -48,7 +48,8 @@ await coll.insertOne({ filter });
 ### Read
 
 ```js
-await coll.find();
+const cursor = coll.find();
+for await (const o of cursor) console.log(o);
 ```
 
 ### Update
