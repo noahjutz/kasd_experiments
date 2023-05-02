@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --ui tdd --require src/test/fixtures.js src/test",
+    "test": "mocha --ui tdd src/test",
     "start": "node src/main/app.js"
   },
   "keywords": [],

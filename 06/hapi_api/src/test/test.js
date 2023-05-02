@@ -3,6 +3,14 @@ import { mongo, axios } from "./fixtures.js";
 import * as server from "../main/server.js";
 
 suite("API", () => {
+  suiteSetup(async () => {
+    await mongo.connect();
+  });
+
+  suiteTeardown(async () => {
+    await mongo.close();
+  });
+
   setup(async () => {
     await mongo.db("test").dropDatabase();
   });
