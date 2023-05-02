@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import * as examples from "./examples.js";
 
 const url = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(url);
@@ -6,15 +7,12 @@ const client = new MongoClient(url);
 await client.connect();
 console.log("Connected successfully to server");
 
-const tDropDatabase = async () => {
-  const db = client.db("mydb");
-  await db.collection("mycoll").insertOne({ name: "Joe" });
+const db = client.db("mydb");
 
-  console.log(await db.stats());
-  await db.dropDatabase();
-  console.log(await db.stats());
-};
+console.log(">>> dropDatabase");
+await examples.dropDatabase(db);
 
-await tDropDatabase();
+console.log(">>> dropCollection");
+await examples.dropCollection(db);
 
 await client.close();

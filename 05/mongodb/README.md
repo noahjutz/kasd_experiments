@@ -32,6 +32,11 @@ await db.dropDatabase();
 
 API Reference: [`Collection`](https://mongodb.github.io/node-mongodb-native/5.3/classes/Collection.html)
 
+```js
+const coll = await db.collection("mycoll");
+await db.dropCollection("mycoll");
+```
+
 ## [Documents](https://www.mongodb.com/docs/drivers/node/current/quick-reference)
 
 ### Create
