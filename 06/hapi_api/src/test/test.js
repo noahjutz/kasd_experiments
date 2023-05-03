@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { mongo, axios } from "./fixtures.js";
+import { mongo, db, axios } from "./fixtures.js";
 import * as server from "../main/server.js";
 
 suite("API", () => {
@@ -22,8 +22,10 @@ suite("API", () => {
     assert.equal(res.data, "Hello, World!");
   });
 
-  test("/posts returns empty list", async () => {
+  test("/posts returns posts", async () => {
+    await db.collection("posts").insertOne({ text: "this is a post" });
+    const expected = await db.collection("posts").find().toArray();
     const res = await axios.get("/posts");
-    assert.isEmpty(res.data);
+    assert.deepEqual(expected, res.data);
   });
 });
