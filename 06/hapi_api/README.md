@@ -2,6 +2,14 @@
 
 This example API server allows clients to interact with public posts on a mock social media platform.
 
+## Roadmap
+
+- [x] `GET /posts`
+  - [ ] return id as well!
+- [ ] `GET /post/{text}`
+- [ ] `PUT /post/{id}/{text}`
+- [ ] `DELETE /post/{id}`
+
 ## Tech stack
 
 |           |                         |
