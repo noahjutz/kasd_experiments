@@ -1,6 +1,5 @@
 import { assert } from "chai";
 import { mongo, db, axios } from "./fixtures.js";
-import * as server from "../main/server.js";
 
 suite("API", () => {
   suiteSetup(async () => {
