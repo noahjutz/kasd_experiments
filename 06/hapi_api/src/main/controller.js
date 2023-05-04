@@ -1,4 +1,9 @@
 import mongoose from "mongoose";
 import { Boom } from "@hapi/boom";
 
-export const getPosts = (request, h) => [];
+const Post = mongoose.model("Post", { text: String });
+
+export const getPosts = async (request, h) => {
+  console.log(await Post.find());
+  return Post.find();
+};

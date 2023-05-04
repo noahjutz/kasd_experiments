@@ -11,7 +11,7 @@ suite("API", () => {
   });
 
   setup(async () => {
-    await mongo.db("test").dropDatabase();
+    await mongo.db("posts").dropDatabase();
   });
 
   teardown(async () => {});
@@ -21,10 +21,14 @@ suite("API", () => {
     assert.equal(res.data, "Hello, World!");
   });
 
-  test("/posts returns posts", async () => {
-    await db.collection("posts").insertOne({ text: "this is a post" });
-    const expected = await db.collection("posts").find().toArray();
-    const res = await axios.get("/posts");
-    assert.deepEqual(expected, res.data);
+  suite("/posts returns inserted post with text", () => {
+    ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
+      test(text, async () => {
+        await db.collection("posts").insertOne({ text });
+
+        const res = await axios.get("/posts");
+        assert.deepEqual(text, res.data[0].text);
+      });
+    });
   });
 });
