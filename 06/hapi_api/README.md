@@ -106,3 +106,11 @@ You want to implement a feature.
    1. which tests are required to prove that this requirement is fulfilled?
    1. for each test:
       1. Red, green, refactor.
+
+## Troubleshooting
+
+### I don't know where this "\_id": {} is coming from.
+
+In the output, the expected text is in red and the actual text is in green, i don't know why it's mixed up.
+
+When you use the mongodb node driver to insert objects, the new ids will be attached to the objects you pass. To prevent this from happening, pass `forceServerObjectId: true`.
