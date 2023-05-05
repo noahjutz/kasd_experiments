@@ -43,12 +43,40 @@
 
 - [x] mongoDB Relationships
 - [x] RESTful APIs
-- [ ] API with hapi & mongodb
-- [ ] [Postman](https://www.postman.com/)
-- [ ] Test APIs with [axios](https://axios-http.com/docs/)
+- [ ] axios (P3)
 
 ### 07
 
+- [ ] Full Stack RESTful API
+- [ ] arki (P3)
+
 ### 08
 
+- [ ] OpenAPI
+
 ### 09
+
+- [ ] OpenAPI docs generated from Joi
+- [ ] JWT
+  - [ ] OAuth
+- [ ] jsonwebtoken
+- [ ] hapi-auth-jwt2
+
+### 10
+
+- [ ] Airbnb Style Guide
+- [ ] JWT + Joi
+- [ ] curl
+- [ ] Seeding for unit tests
+  - [ ] mongoose-seed
+  - [ ] mongoose-seed-plus
+
+### 11
+
+- [ ] DOM
+- [ ] cloudinary (P3)
+
+### 12
+
+- [ ] Svelte
+- [ ] npm modules with svelte
