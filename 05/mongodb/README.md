@@ -66,5 +66,6 @@ await coll.deleteOne({ filter });
 
 ## Further reading
 
+- [Reference & API](https://mongodb.github.io/node-mongodb-native/index.html)
 - [Documentation](https://www.mongodb.com/docs/drivers/node/current/)
-- [API Reference](https://mongodb.github.io/node-mongodb-native/5.3/index.html)
+- [API Reference](https://mongodb.github.io/node-mongodb-native/Next/index.html)
