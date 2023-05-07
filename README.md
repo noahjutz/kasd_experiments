@@ -43,7 +43,7 @@
 
 - [x] mongoDB Relationships
 - [x] RESTful APIs
-- [ ] axios (P3)
+- [x] axios
 
 ### 07
 
