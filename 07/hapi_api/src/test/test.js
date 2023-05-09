@@ -21,25 +21,29 @@ suite("API", () => {
     assert.equal(res.data, "Hello, World!");
   });
 
-  suite("/posts returns inserted post with text", () => {
+  suite("/posts returns inserted post", () => {
     ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
       test(text, async () => {
-        await posts.insertOne({ text });
+        const doc = { text };
+        await posts.insertOne(doc);
+        doc._id = doc._id.toString();
 
         const res = await axios.get("/posts");
-        assert.equal(text, res.data[0]?.text);
+
+        assert.deepEqual(doc, res.data[0]);
       });
     });
   });
 
-  test("/posts returns inserted posts with text", async () => {
+  test("/posts returns inserted posts", async () => {
     const expected = [
       "Hello, #world!",
       "Deutsch hat ßäöü.",
       "Some symbols are !@#$%^&*()_+",
     ].map((text) => ({ text }));
 
-    await posts.insertMany(expected, { forceServerObjectId: true });
+    await posts.insertMany(expected);
+    expected.forEach((e) => (e._id = e._id.toString()));
 
     const res = await axios.get("/posts");
     assert.deepEqual(expected, res.data);
