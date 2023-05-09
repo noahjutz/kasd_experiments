@@ -5,7 +5,6 @@ This example API server allows clients to interact with public posts on a mock s
 ## Roadmap
 
 - [x] `GET /posts`
-  - [ ] return id as well!
 - [ ] `GET /post/{text}`
 - [ ] `PUT /post/{id}`
 - [ ] `PATCH /post/{id}`
