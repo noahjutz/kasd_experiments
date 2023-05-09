@@ -16,36 +16,47 @@ suite("API", () => {
 
   teardown(async () => {});
 
-  test("Entry point returns Hello World", async () => {
-    const res = await axios.get("/");
-    assert.equal(res.data, "Hello, World!");
-  });
-
-  suite("/posts returns inserted post", () => {
-    ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
-      test(text, async () => {
-        const doc = { text };
-        await posts.insertOne(doc);
-        doc._id = doc._id.toString();
-
-        const res = await axios.get("/posts");
-
-        assert.deepEqual(doc, res.data[0]);
-      });
+  suite("GET /", () => {
+    test("Entry point returns Hello World", async () => {
+      const res = await axios.get("/");
+      assert.equal(res.data, "Hello, World!");
     });
   });
 
-  test("/posts returns inserted posts", async () => {
-    const expected = [
-      "Hello, #world!",
-      "Deutsch hat ßäöü.",
-      "Some symbols are !@#$%^&*()_+",
-    ].map((text) => ({ text }));
+  suite("GET /posts", () => {
+    suite("/posts returns inserted post", () => {
+      ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
+        test(text, async () => {
+          const doc = { text };
+          await posts.insertOne(doc);
+          doc._id = doc._id.toString();
 
-    await posts.insertMany(expected);
-    expected.forEach((e) => (e._id = e._id.toString()));
+          const res = await axios.get("/posts");
 
-    const res = await axios.get("/posts");
-    assert.deepEqual(expected, res.data);
+          assert.deepEqual(doc, res.data[0]);
+        });
+      });
+    });
+
+    test("/posts returns inserted posts", async () => {
+      const expected = [
+        "Hello, #world!",
+        "Deutsch hat ßäöü.",
+        "Some symbols are !@#$%^&*()_+",
+      ].map((text) => ({ text }));
+
+      await posts.insertMany(expected);
+      expected.forEach((e) => (e._id = e._id.toString()));
+
+      const res = await axios.get("/posts");
+      assert.deepEqual(expected, res.data);
+    });
+  });
+
+  suite("GET /post/{id}", () => {
+    test("/post/1 returns something", async () => {
+      const res = await axios.get("/post/1");
+      assert.isNotNull(res);
+    });
   });
 });

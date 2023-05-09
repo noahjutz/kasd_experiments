@@ -1,4 +1,4 @@
-import { getPosts } from "./controller.js";
+import { getPosts, getPost } from "./controller.js";
 
 export default [
   {
@@ -10,5 +10,10 @@ export default [
     path: "/posts",
     method: "GET",
     handler: getPosts,
+  },
+  {
+    path: "/post/{id}",
+    method: "GET",
+    handler: getPost,
   },
 ];
