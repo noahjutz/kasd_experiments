@@ -1,5 +1,6 @@
 import { assert } from "chai";
 import { mongo, posts, axios } from "./fixtures.js";
+import { Boom } from "@hapi/boom";
 
 suite("API", () => {
   suiteSetup(async () => {
@@ -52,13 +53,26 @@ suite("API", () => {
   });
 
   suite("GET /post/{id}", () => {
-    test("/post/1 returns inserted post", async () => {
+    test("returns inserted post", async () => {
       const expected = { text: "Hello, #world!" };
       await posts.insertOne(expected);
       expected._id = expected._id.toString();
 
       const res = await axios.get("/post/" + expected._id);
       assert.deepEqual(expected, res.data);
+    });
+  });
+
+  suite("PUT /post/{id}", () => {
+    test("Throws 400 if post doesn't exist", async () => {
+      const res = await axios.put("/post/id");
+      assert.equal(res.data, Boom.badRequest("Post doesn't exist"));
+    });
+    test("returns updated post", async () => {
+      throw "not yet implemented";
+    });
+    test("updates post at id", async () => {
+      throw "not yet implemented";
     });
   });
 });
