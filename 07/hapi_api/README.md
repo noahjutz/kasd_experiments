@@ -126,4 +126,4 @@ When you use the mongodb node driver to insert objects, the new ids will be atta
 
 ## ObjectId("abc") != "abc"
 
-To get the string representation of an `ObjectId`, call [`_id.toHexString()`](https://mongodb.github.io/node-mongodb-native/Next/classes/BSON.ObjectId.html#toHexString) or [`_id.toString()`](https://mongodb.github.io/node-mongodb-native/Next/classes/BSON.ObjectId.html#toString).
+To get the string representation of an `ObjectId`, call [`_id.toHexString()`](https://mongodb.github.io/node-mongodb-native/5.3/classes/BSON.ObjectId.html#toHexString) or [`_id.toString()`](https://mongodb.github.io/node-mongodb-native/5.3/classes/BSON.ObjectId.html#toString).
