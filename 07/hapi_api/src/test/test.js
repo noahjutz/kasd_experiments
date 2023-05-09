@@ -24,17 +24,15 @@ suite("API", () => {
   });
 
   suite("GET /posts", () => {
-    suite("/posts returns inserted post", () => {
-      ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
-        test(text, async () => {
-          const doc = { text };
-          await posts.insertOne(doc);
-          doc._id = doc._id.toString();
+    ["Hello, #world!", "Deutsch hat ßöäü."].forEach((text) => {
+      test("Inserted post is returned: " + text, async () => {
+        const doc = { text };
+        await posts.insertOne(doc);
+        doc._id = doc._id.toString();
 
-          const res = await axios.get("/posts");
+        const res = await axios.get("/posts");
 
-          assert.deepEqual(doc, res.data[0]);
-        });
+        assert.deepEqual(doc, res.data[0]);
       });
     });
 
