@@ -124,6 +124,6 @@ In the output, the expected text is in red and the actual text is in green, i do
 
 When you use the mongodb node driver to insert objects, the new ids will be attached to the objects you pass. To prevent this from happening, pass `forceServerObjectId: true`.
 
-## ObjectId("abc") != "abc"
+### ObjectId("abc") != "abc"
 
 To get the string representation of an `ObjectId`, call [`_id.toHexString()`](https://mongodb.github.io/node-mongodb-native/5.3/classes/BSON.ObjectId.html#toHexString) or [`_id.toString()`](https://mongodb.github.io/node-mongodb-native/5.3/classes/BSON.ObjectId.html#toString).
