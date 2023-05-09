@@ -52,9 +52,13 @@ suite("API", () => {
   });
 
   suite("GET /post/{id}", () => {
-    test("/post/1 returns something", async () => {
-      const res = await axios.get("/post/1");
-      assert.isNotNull(res);
+    test("/post/1 returns inserted post", async () => {
+      const expected = { text: "Hello, #world!" };
+      await posts.insertOne(expected);
+      expected._id = expected._id.toString();
+
+      const res = await axios.get("/post/" + expected._id);
+      assert.deepEqual(expected, res.data);
     });
   });
 });
