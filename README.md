@@ -16,7 +16,7 @@
 - [x] @hapi/vision
 - [x] @hapi/cookie
   - [ ] [auth](https://hapi.dev/tutorials/auth)
-- [ ] @hapi/boom
+- [x] @hapi/boom
 - [x] node event loop
 
 ### 03
