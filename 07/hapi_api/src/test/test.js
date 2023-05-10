@@ -1,6 +1,7 @@
 import { assert } from "chai";
 import { mongo, posts, axios } from "./fixtures.js";
-import { Boom } from "@hapi/boom";
+import Boom from "@hapi/boom";
+import { AxiosError } from "axios";
 
 suite("API", () => {
   suiteSetup(async () => {
@@ -65,8 +66,8 @@ suite("API", () => {
 
   suite("PUT /post/{id}", () => {
     test("Throws 400 if post doesn't exist", async () => {
-      const res = await axios.put("/post/id");
-      assert.equal(res.data, Boom.badRequest("Post doesn't exist"));
+      const request = () => axios.put("/post/1");
+      assert.throws(request); // todo try chai-as-promised
     });
     test("returns updated post", async () => {
       throw "not yet implemented";
