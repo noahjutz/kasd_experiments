@@ -1,7 +1,11 @@
 import { assert } from "chai";
+import chai from "chai";
+import chp from "chai-as-promised";
 import { mongo, posts, axios } from "./fixtures.js";
 import Boom from "@hapi/boom";
 import { AxiosError } from "axios";
+
+chai.use(chp);
 
 suite("API", () => {
   suiteSetup(async () => {
@@ -65,15 +69,22 @@ suite("API", () => {
   });
 
   suite("PUT /post/{id}", () => {
-    test("Throws 400 if post doesn't exist", async () => {
-      const request = () => axios.put("/post/1");
-      assert.throws(request); // todo try chai-as-promised
+    test("Throws error if post doesn't exist", async () => {
+      const request = axios.put("/post/1");
+      await assert.isRejected(request, AxiosError);
     });
-    test("returns updated post", async () => {
-      throw "not yet implemented";
+    test("Throws error 400 if post doesn't exist", async () => {
+      try {
+        await axios.put("/post/1");
+      } catch (err) {
+        assert.equal(400, err.response.data.statusCode);
+      }
     });
-    test("updates post at id", async () => {
-      throw "not yet implemented";
-    });
+    // test("returns updated post", async () => {
+    //   throw "not yet implemented";
+    // });
+    // test("updates post at id", async () => {
+    //   throw "not yet implemented";
+    // });
   });
 });
