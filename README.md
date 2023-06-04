@@ -47,17 +47,17 @@
 
 ### 07
 
-- [ ] Full Stack RESTful API
+- [x] Full Stack RESTful API
 - [ ] arki (P3)
 
 ### 08
 
-- [ ] OpenAPI
+- [ ] OpenAPI (P1)
 
 ### 09
 
 - [ ] OpenAPI docs generated from Joi
-- [ ] JWT
+- [ ] JWT (P1)
   - [ ] OAuth
 - [ ] jsonwebtoken
 - [ ] hapi-auth-jwt2
@@ -66,17 +66,46 @@
 
 - [ ] Airbnb Style Guide
 - [ ] JWT + Joi
-- [ ] curl
 - [ ] Seeding for unit tests
   - [ ] mongoose-seed
   - [ ] mongoose-seed-plus
 
 ### 11
 
-- [ ] DOM
-- [ ] cloudinary (P3)
+- [x] DOM
+- [ ] cloudinary (P2)
 
 ### 12
 
-- [ ] Svelte
+- [ ] Svelte (P1)
 - [ ] npm modules with svelte
+
+### 13
+
+- [ ] [Svelte Handbook](https://flaviocopes.com/book/svelte/)
+- [ ] Svelte components
+
+## 14
+
+- [ ] SvelteKit (P1)
+- [ ] SvelteKit Routing
+- [ ] SvelteKit Pages & Components
+- [ ] Auth in Svelte with HAPI/JWT (P1)
+
+## 15
+
+Nothing
+
+## 16
+
+- [ ] Leaflet in Svelte (P2)
+- [ ] Svelte store writable, subscribe
+
+## 17
+
+- [ ] svelte frappe charts
+- [ ] Front end deployment
+
+## 18
+
+- [ ] Typescript
