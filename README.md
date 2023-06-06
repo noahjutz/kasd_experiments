@@ -53,6 +53,7 @@
 ### 08
 
 - [ ] OpenAPI (P1)
+  - [ ] hapi-swagger
 
 ### 09
 
