@@ -57,9 +57,8 @@
 ### 09
 
 - [ ] OpenAPI docs generated from Joi
-- [ ] JWT (P1)
-  - [x] hapi-auth-jwt2
-  - [ ] jsonwebtoken
+- [x] hapi-auth-jwt2
+- [x] jsonwebtoken
 
 ### 10
 
