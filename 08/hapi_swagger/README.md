@@ -25,9 +25,9 @@ const route = {
 };
 ```
 
-## Model documentation with Joi
+## Joi validation & model documentation
 
-Todo
+todo
 
 ## Further reading
 
