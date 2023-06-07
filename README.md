@@ -2,7 +2,7 @@
 
 ## Content
 
-### 01
+### 01 Node
 
 - [x] Prettier, ESLint
 - [x] Hapi
@@ -10,58 +10,57 @@
   - [ ] npm
 - [x] Handlebars
 
-### 02
+### 02 Hapi
 
 - [x] @hapi/inert
 - [x] @hapi/vision
 - [x] @hapi/cookie
-  - [ ] [auth](https://hapi.dev/tutorials/auth)
 - [x] @hapi/boom
 - [x] node event loop
 
-### 03
+### 03 Joi
 
 - [x] async await
 - [x] dotenv
 - [x] Joi
 - [x] Joi with Hapi
 
-### 04
+### 04 TDD
 
 - [x] lowdb
 - [x] lowdb_stack
 - [x] Mocha
 - [x] Chai Assert
 
-### 05
+### 05 Models
 
 - [x] mongosh
 - [x] mongoose
 - [x] mongoDB Node Driver
 
-### 06
+### 06 APIs
 
 - [x] mongoDB Relationships
 - [x] RESTful APIs
 - [x] axios
 
-### 07
+### 07 REST
 
 - [x] Full Stack RESTful API
 - [ ] arki (P3)
 
-### 08
+### 08 OpenAPI
 
-- [ ] OpenAPI (P1)
-  - [ ] hapi-swagger
+- [x] hapi-swagger
 
-### 09
+### 09 JWT
 
-- [ ] OpenAPI docs generated from Joi
 - [x] hapi-auth-jwt2
 - [x] jsonwebtoken
+- [ ] [Hapi Authentication](https://hapi.dev/tutorials/auth)
+- [ ] hapi-swagger + joi
 
-### 10
+### 10 Seeding
 
 - [ ] Airbnb Style Guide
 - [ ] JWT + Joi
@@ -69,42 +68,42 @@
   - [ ] mongoose-seed
   - [ ] mongoose-seed-plus
 
-### 11
+### 11 DOM
 
-- [x] DOM
+- [ ] DOM
 - [ ] cloudinary (P2)
 
-### 12
+### 12 Svelte
 
 - [ ] Svelte (P1)
 - [ ] npm modules with svelte
 
-### 13
+### 13 Svelte Components
 
 - [ ] [Svelte Handbook](https://flaviocopes.com/book/svelte/)
 - [ ] Svelte components
 
-## 14
+## 14 SvelteKit
 
 - [ ] SvelteKit (P1)
 - [ ] SvelteKit Routing
 - [ ] SvelteKit Pages & Components
 - [ ] Auth in Svelte with HAPI/JWT (P1)
 
-## 15
+## 15 Svelte Applications
 
 Nothing
 
-## 16
+## 16 Svelte Maps
 
 - [ ] Leaflet in Svelte (P2)
 - [ ] Svelte store writable, subscribe
 
-## 17
+## 17 Svelte Charts
 
 - [ ] svelte frappe charts
 - [ ] Front end deployment
 
-## 18
+## 18 Typescript
 
 - [ ] Typescript
