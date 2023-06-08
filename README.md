@@ -83,27 +83,27 @@
 - [ ] [Svelte Handbook](https://flaviocopes.com/book/svelte/)
 - [ ] Svelte components
 
-## 14 SvelteKit
+### 14 SvelteKit
 
 - [ ] SvelteKit (P1)
 - [ ] SvelteKit Routing
 - [ ] SvelteKit Pages & Components
 - [ ] Auth in Svelte with HAPI/JWT (P1)
 
-## 15 Svelte Applications
+### 15 Svelte Applications
 
 Nothing
 
-## 16 Svelte Maps
+### 16 Svelte Maps
 
 - [ ] Leaflet in Svelte (P2)
 - [ ] Svelte store writable, subscribe
 
-## 17 Svelte Charts
+### 17 Svelte Charts
 
 - [ ] svelte frappe charts
 - [ ] Front end deployment
 
-## 18 Typescript
+### 18 Typescript
 
 - [ ] Typescript
