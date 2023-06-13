@@ -75,17 +75,17 @@
 
 ### 12 Svelte
 
-- [ ] Svelte (P1)
+- [x] Svelte (P1)
 - [ ] npm modules with svelte
 
 ### 13 Svelte Components
 
 - [ ] [Svelte Handbook](https://flaviocopes.com/book/svelte/)
-- [ ] Svelte components
+- [x] Svelte components
 
 ### 14 SvelteKit
 
-- [ ] SvelteKit (P1)
+- [x] SvelteKit (P1)
 - [ ] SvelteKit Routing
 - [ ] SvelteKit Pages & Components
 - [ ] Auth in Svelte with HAPI/JWT (P1)
@@ -96,6 +96,7 @@ Nothing
 
 ### 16 Svelte Maps
 
+- [x] Leaflet
 - [ ] Leaflet in Svelte (P2)
 - [ ] Svelte store writable, subscribe
 
@@ -106,4 +107,4 @@ Nothing
 
 ### 18 Typescript
 
-- [ ] Typescript
+- [x] Typescript
