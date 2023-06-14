@@ -19,6 +19,7 @@ systemctl start mongodb
 ```sh
 mongosh
 ```
+
 ### [Help](https://www.mongodb.com/docs/mongodb-shell/run-commands)
 
 ```js
@@ -63,6 +64,17 @@ test> db.myCollection.deleteOne({/*filter*/}) // delete
 
 - [Update Operators](https://www.mongodb.com/docs/manual/reference/operator/update/)
 - [Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query)
+
+## Troubleshooting
+
+### Mongodb fails with exit code 14
+
+Fix file permissions ([StackOverflow](https://askubuntu.com/questions/823288/mongodb-loads-but-breaks-returning-status-14) - [MongoDB Manual](https://www.mongodb.com/docs/manual/reference/exit-codes/)):
+
+```
+sudo chown -R mongodb:mongodb /var/lib/mongodb
+sudo chown mongodb:mongodb /tmp/mongodb-27017.sock
+```
 
 ## Further reading
 
