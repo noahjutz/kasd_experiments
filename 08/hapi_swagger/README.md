@@ -29,6 +29,18 @@ const route = {
 
 todo
 
+## Troubleshooting
+
+### json-schema-ref-parser is deprecated
+
+Following warning: 
+
+```
+npm WARN deprecated json-schema-ref-parser@6.1.0: Please switch to @apidevtools/json-schema-ref-parser
+```
+
+Ignore for now.
+
 ## Further reading
 
 - [hapi-swagger - npm](https://www.npmjs.com/package/hapi-swagger)
