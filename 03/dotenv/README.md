@@ -8,8 +8,16 @@ npm i dotenv
 
 ## Usage
 
+### CommonJS
+
 ```js
 require("dotenv").config();
+```
+
+### ESM
+
+```js
+import "dotenv/config";
 ```
 
 ## Accessing variables
