@@ -3,13 +3,13 @@
 ## Encode
 
 ```js
-jws.sign(payload, key);
+jwt.sign(payload, key);
 ```
 
 ## Decode
 
 ```js
-jws.verify(token, key);
+jwt.verify(token, key);
 ```
 
 ## Further reading
