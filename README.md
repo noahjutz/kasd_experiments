@@ -108,3 +108,7 @@ Nothing
 ### 18 Typescript
 
 - [x] Typescript
+
+## Helpful links
+
+- [httpstat.us](https://httpstat.us/)
